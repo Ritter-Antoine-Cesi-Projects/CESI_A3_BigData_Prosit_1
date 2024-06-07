@@ -84,7 +84,35 @@ Vous commencez donc à prendre connaissance de la production d'Archie. L'archite
 
 # **Notion de cours**
 
-## Cours Complet sur le Big Data et les Infrastructures Big Data
+## Mots clés
+
+- Architecture Big Data : L'architecture Big Data fait référence à la conception et la structure des systèmes utilisés pour gérer et analyser de grandes quantités de données. Elle inclut les composants matériels et logiciels nécessaires pour collecter, stocker, traiter et analyser les données volumineuses et complexes. Une architecture Big Data typique comprend des bases de données NoSQL, des outils de traitement distribué comme Hadoop et Spark, des systèmes de stockage en masse comme HDFS, et des outils de visualisation et d'analyse des données.
+
+- Environnement virtualisé : Un environnement virtualisé est un système informatique dans lequel les ressources matérielles, comme les serveurs, le stockage et les réseaux, sont abstraites et gérées par un logiciel de virtualisation. Cela permet de créer plusieurs machines virtuelles (VM) sur un seul serveur physique, chacune pouvant exécuter ses propres systèmes d'exploitation et applications, améliorant ainsi l'efficacité et la flexibilité des ressources informatiques.
+
+- Modèle logique : Un modèle logique de données est une représentation abstraite des structures de données nécessaires pour supporter les processus métiers d'une organisation. Il définit les entités, leurs attributs, et les relations entre ces entités sans se soucier des détails de stockage ou de l'implémentation physique. Il sert de pont entre les besoins fonctionnels et le modèle physique de la base de données.
+
+- Bases de données multidimensionnelles : Les bases de données multidimensionnelles, souvent utilisées dans le contexte de l'analyse de données et du data warehousing, permettent de modéliser les données sous forme de cubes. Chaque dimension du cube représente une perspective différente de l'analyse (comme le temps, la géographie, les produits), facilitant ainsi le traitement analytique en ligne (OLAP) et permettant des requêtes rapides et complexes.
+
+- Entreposage de données : L'entreposage de données (ou data warehousing) consiste à collecter, stocker et gérer de grandes quantités de données provenant de sources disparates pour permettre l'analyse et la prise de décisions. Un entrepôt de données est conçu pour faciliter les requêtes et les rapports complexes, offrant une vue cohérente et centralisée des données historiques.
+
+- Implémentation de données physiques : L'implémentation de données physiques se réfère à la manière dont les données sont réellement stockées dans une base de données, incluant la structure des tables, les index, les partitions, et autres aspects techniques. C'est la phase où le modèle logique de données est traduit en une structure de base de données physique sur un système de gestion de bases de données (SGBD).
+
+- HDFS Hadoop : Le HDFS (Hadoop Distributed File System) est un système de fichiers distribué conçu pour stocker de grandes quantités de données sur des clusters de machines. Il fait partie de l'écosystème Hadoop et permet un stockage et un accès fiables et rapides aux données, répartis sur plusieurs nœuds, tout en assurant la tolérance aux pannes.
+
+- Visualisation des données : La visualisation des données est la représentation graphique des données pour aider à comprendre les tendances, les patterns et les insights. Les outils de visualisation des données transforment des données complexes en graphiques, diagrammes, tableaux de bord interactifs, etc., facilitant ainsi la prise de décision basée sur les données.
+
+- ETL : ETL (Extract, Transform, Load) est un processus de gestion des données utilisé pour extraire des données de sources diverses, les transformer en un format adapté à l'analyse, et les charger dans un entrepôt de données ou une base de données cible. C'est une étape cruciale dans la préparation des données pour l'analyse.
+
+- Hive : Apache Hive est un outil de data warehousing et d'analyse de données construit sur Hadoop. Il permet de requêter et de gérer de grandes quantités de données stockées dans HDFS en utilisant un langage similaire à SQL appelé HiveQL. Hive facilite l'analyse des données en offrant une interface familière aux utilisateurs SQL.
+
+- Power BI : Power BI est un service d'analyse de données développé par Microsoft. Il permet de visualiser les données et de partager des insights au sein de l'organisation. Power BI offre des outils pour connecter, transformer, et visualiser les données, avec des fonctionnalités interactives de tableaux de bord, de rapports et d'explorations de données.
+
+- Cloudera : Cloudera est une entreprise de logiciels qui fournit une plateforme de gestion de données basée sur Hadoop. Elle offre des outils pour le stockage, le traitement, l'analyse et la gestion des données à grande échelle, facilitant la construction de solutions de Big Data pour les entreprises.
+
+- Modélisation : La modélisation des données est le processus de création d'un modèle de données abstrait qui organise les éléments de données et standardise leur relation. La modélisation des données peut être logique (focalisée sur la structure et les relations conceptuelles) ou physique (focalisée sur la manière dont les données sont stockées dans le système de base de données).
+
+## Big Data et Infrastructures Big Data
 
 ### Introduction
 
@@ -332,6 +360,59 @@ Il est par ailleurs **difficile d’effectuer des changements** dans les types
 Ainsi, les organisations doivent déployer **de nombreuses ressources** pour former les employés et pour implémenter le Warehouse. Il est donc important de peser les avantages et les inconvénients avant de décider d’utiliser ce type de solution.
 
 # Solutions
+
+## Analyse de l'Architecture
+
+### Sources de données
+
+- CSV, MySQL, Excel : Ces sources de données sont courantes et appropriées pour un projet de cette nature. Elles permettent de centraliser des données variées provenant de différentes sources.
+
+### Stockage des données
+
+- HDFS (Hadoop Distributed File System) : HDFS est un choix robuste pour le stockage de grandes quantités de données. Il est bien adapté pour les projets Big Data grâce à sa capacité à stocker des volumes massifs de données de manière distribuée.
+
+### ETL (Extract, Transform, Load)
+
+- Le processus ETL est essentiel pour nettoyer, transformer et charger les données dans le système de stockage. Bien que le schéma ne précise pas les outils spécifiques utilisés pour l'ETL, cela reste une étape cruciale et nécessaire dans toute architecture Big Data.
+
+### Analyse de données
+
+- Cloudera : Il s'agit d'une distribution Hadoop qui inclut divers outils pour l'analyse de données. Cloudera est réputé pour sa robustesse et son support commercial.
+- Hadoop MapReduce : Un modèle de programmation pour le traitement de grandes quantités de données. Bien qu'il soit performant, il existe des alternatives plus modernes comme Spark.
+- Hive : Un data warehouse software qui facilite la requête et l'analyse de données stockées dans HDFS en utilisant une syntaxe similaire à SQL. C'est un bon choix pour les analystes de données.
+
+### Visualisation et exploitation des données
+
+- Microsoft Power BI : Un outil puissant pour la visualisation de données et la création de rapports interactifs. C'est un bon choix pour rendre les données compréhensibles pour les utilisateurs finaux.
+- Requêtes : La capacité à exécuter des requêtes est cruciale pour analyser et exploiter les données. Hive permet cela efficacement.
+
+## Validation de l'Architecture
+
+L'architecture proposée semble complète et bien pensée pour un projet Big Data. Voici quelques points supplémentaires à considérer pour valider complètement cette architecture.
+
+### Performance
+
+Les performances de l'ensemble du système doivent être testées pour s'assurer qu'il peut gérer les volumes de données attendus et répondre aux exigences de temps de réponse.
+
+### Sécurité
+
+La sécurité des données est une préoccupation majeure dans tout projet Big Data. Il est essentiel de mettre en place des mesures de sécurité appropriées pour protéger les données contre les accès non autorisés.
+
+### Scalabilité
+
+L'architecture choisie doit pouvoir évoluer avec l'augmentation des volumes de données et des besoins en analyse.
+
+### Compatibilité et Intégration
+
+Il est important de s'assurer que tous les composants de l'architecture sont compatibles et s'intègrent bien les uns avec les autres pour assurer un fonctionnement fluide du système.
+
+### Documentation et Maintenance
+
+Une bonne documentation est essentielle pour que toute l'équipe puisse comprendre et maintenir le système.
+
+## Conclusion
+
+L'architecture proposée par Archie est bien alignée avec les meilleures pratiques pour un projet Big Data. Cependant, il est crucial de valider chaque composant par des tests pratiques pour s'assurer qu'ils répondent bien aux exigences spécifiques du projet, en termes de performance, sécurité, et scalabilité.
 
 # Ressources
 
